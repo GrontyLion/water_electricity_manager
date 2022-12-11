@@ -1,0 +1,171 @@
+JFDML JFormDesigner: "8.0.0.0.194" Java: "17.0.5" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq {space :::p, par l {comp panel1:::::x, comp panel2:::::x, seq l {comp buttonDeleteBottom:::p::p, space :0:628:x}}}}"
+			"$verticalGroup": "par l {seq l {space :::p, comp panel1:::p::p, space :::p, comp panel2:::p::p, space s:::p, comp buttonDeleteBottom:::p::p, space ::14:x}}"
+		} ) {
+			name: "this"
+			"title": "更多宿舍楼管理功能"
+			"resizable": false
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq l {par t:::p {seq t {space :::x, comp buttonAddTop:::p::p, space s:::p, comp buttonResetTop:::p::p}, seq l {space :::p, par l:::p {seq {comp label1:::p::p, space :::p, comp textFieldDNameTop:::p::p, space s:::p, comp label2:::p::p, space :::p, comp textFieldJanTop:::p::p}, seq l {comp label6:::p::p, space :::p, comp textFieldNumbersTop:::::x}}, space s:::p, par l {seq {comp label3:::p::p, space :::p, comp textFieldNameTop:::p::p, space s:::p, comp label4:::p::p, space :::p, comp textFieldPhoneTop:::p::p, space s:::p, comp label5:::p::p, space :::p, comp textFieldEmailTop:::p::p}, seq {comp label7:::p::p, space :::p, comp textFieldStartTop:::p::p, space s:::p, comp label8:::p::p, space :::p, comp textFieldEpriceTop:::p::p, space s:::p, comp label9:::p::p, space :::p, comp textFieldWpriceTop:::p::p}}}}, space ::16:x}}"
+				"$verticalGroup": "par l {seq l {space :::p, par b {comp label1::b:p::p, comp textFieldDNameTop::b:p::p, comp label2::b:p::p, comp textFieldJanTop::b:p::p, comp label3::b:p::p, comp textFieldNameTop::b:p::p, comp label4::b:p::p, comp textFieldPhoneTop::b:p::p, comp label5::b:p::p, comp textFieldEmailTop::b:p::p}, space s:::p, par b {comp label6::b:p::p, comp textFieldNumbersTop::b:p::p, comp label7::b:p::p, comp textFieldStartTop::b:p::p, comp label8::b:p::p, comp textFieldEpriceTop::b:p::p, comp label9::b:p::p, comp textFieldWpriceTop::b:p::p}, space s:::p, par b {comp buttonResetTop::b:p::p, comp buttonAddTop::b:p::p}, space :0:7:x}}"
+			} ) {
+				name: "panel1"
+				"border": new javax.swing.border.TitledBorder( "新增宿舍楼" )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label1"
+					"text": "宿舍楼名："
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "textFieldDNameTop"
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label2"
+					"text": "容量（间）："
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "textFieldJanTop"
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label3"
+					"text": "管理员姓名："
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "textFieldNameTop"
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label4"
+					"text": "管理员手机："
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "textFieldPhoneTop"
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label5"
+					"text": "管理员邮箱："
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "textFieldEmailTop"
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label6"
+					"text": "1，2，3，4，5，6人间数量："
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "textFieldNumbersTop"
+					"toolTipText": "格式：16,20,63,22,10,11"
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label7"
+					"text": "宿舍名（起始号）："
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "textFieldStartTop"
+					"toolTipText": "例如：101"
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label8"
+					"text": "电价："
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "textFieldEpriceTop"
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label9"
+					"text": "水价："
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "textFieldWpriceTop"
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "buttonAddTop"
+					"text": "新增"
+					addEvent( new FormEvent( "java.awt.event.MouseListener", "mousePressed", "buttonAddTopMousePressed", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "buttonResetTop"
+					"text": "重置"
+					addEvent( new FormEvent( "java.awt.event.MouseListener", "mousePressed", "buttonResetTopMousePressed", true ) )
+				} )
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq t {space ::13:x, par l {seq {comp label10:::p::p, space :::p, comp textFieldIdBottom:::p::p, space s:::p, comp label11:::p::p, space :::p, comp textFieldDNameBottom:::p::p, space s:::p, comp label12:::p::p, space :::p, comp textFieldNameBottom:::p::p, space s:::p, comp label13:::p::p, space :::p, comp textFieldPhoneBottom:::p::p}, seq {comp label15:::p::p, space :::p, comp textFieldEPriceBottom:::p::p, space s:::p, comp label16:::p::p, space :::p, comp textFieldWPriceBottom:::p::p}}, space s:::p, par l {seq l {comp label14:::p::p, space :::p, comp textFieldEmailBottom:::p::p, space :p:45:p}, seq t {comp buttonEditBottom:::p::p, space s:::p, comp buttonResetBottom:::p::p, space :p:17:p}}}}"
+				"$verticalGroup": "par l {seq l {space :::p, par b {comp label10::b:p::p, comp textFieldIdBottom::b:p::p, comp label11::b:p::p, comp textFieldDNameBottom::b:p::p, comp label12::b:p::p, comp textFieldNameBottom::b:p::p, comp label13::b:p::p, comp textFieldPhoneBottom::b:p::p, comp label14::b:p::p, comp textFieldEmailBottom::b:p::p}, space s:::p, par b {comp buttonResetBottom::b:p::p, comp buttonEditBottom::b:p::p, comp label15::b:p::p, comp textFieldEPriceBottom::b:p::p, comp label16::b:p::p, comp textFieldWPriceBottom::b:p::p}, space :::x}}"
+			} ) {
+				name: "panel2"
+				"border": new javax.swing.border.TitledBorder( "修改宿舍楼信息（需在宿舍楼表中选中后才会显示）" )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label10"
+					"text": "编号："
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "textFieldIdBottom"
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label11"
+					"text": "宿舍楼名："
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "textFieldDNameBottom"
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label12"
+					"text": "管理员姓名："
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "textFieldNameBottom"
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label13"
+					"text": "管理员手机："
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "textFieldPhoneBottom"
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label14"
+					"text": "管理员邮箱："
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "textFieldEmailBottom"
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "buttonEditBottom"
+					"text": "修改"
+					addEvent( new FormEvent( "java.awt.event.MouseListener", "mousePressed", "buttonEditBottomMousePressed", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "buttonResetBottom"
+					"text": "重置"
+					addEvent( new FormEvent( "java.awt.event.MouseListener", "mousePressed", "buttonResetBottomMousePressed", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label15"
+					"text": "电价（从下个月开始生效）："
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "textFieldEPriceBottom"
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label16"
+					"text": "水价（从下个月开始生效）："
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "textFieldWPriceBottom"
+				} )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "buttonDeleteBottom"
+				"text": "删除选中宿舍楼（危险！）"
+				addEvent( new FormEvent( "java.awt.event.MouseListener", "mousePressed", "buttonDeleteBottomMousePressed", true ) )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 5, 10 )
+			"size": new java.awt.Dimension( 810, 340 )
+		} )
+	}
+}

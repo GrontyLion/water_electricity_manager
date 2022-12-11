@@ -1,0 +1,66 @@
+JFDML JFormDesigner: "8.0.0.0.194" Java: "17.0.5" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq {par l {seq {space :::p, par t {comp label1:::p::p, comp label2::t:p::p, comp label3::t:p::p}, space :::p, par l {comp textFieldId:::p::p, seq {comp textFieldElectricity:::p::p, space s:::p, comp label4:::p::p, space :::p, comp textFieldCElectricity:::p::p}, seq {comp textFieldWater:::p::p, space s:::p, comp label5:::p::p, space :::p, comp textFieldCWater:::p::p}}}, seq l {space :p:51:p, comp buttonSimulate:::p::p, space :p:40:p, comp buttonReset:::p::p}}, space ::19:x}}"
+			"$verticalGroup": "par l {seq t {space :p:12:p, par b {comp label1::b:p::p, comp textFieldId::b:p::p}, space s:::p, par b {comp label2::b:p::p, comp textFieldElectricity::b:p::p, comp label4::b:p::p, comp textFieldCElectricity::b:p::p}, space s:::p, par b {comp label3::b:p::p, comp textFieldWater::b:p::p, comp label5::b:p::p, comp textFieldCWater::b:p::p}, space s:::p, par b {comp buttonSimulate::b:p::p, comp buttonReset::b:p::p}, space :::x}}"
+		} ) {
+			name: "this"
+			"title": "模拟用水用电"
+			"resizable": false
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label1"
+				"text": "宿舍编号："
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "textFieldId"
+				addEvent( new FormEvent( "java.awt.event.KeyListener", "keyTyped", "textFieldIdKeyTyped", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label2"
+				"text": "用电量："
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "textFieldElectricity"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label3"
+				"text": "用水量："
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "textFieldWater"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label4"
+				"text": "当前电价："
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "textFieldCElectricity"
+				"editable": false
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label5"
+				"text": "当前水价："
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "textFieldCWater"
+				"editable": false
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "buttonSimulate"
+				"text": "模拟"
+				addEvent( new FormEvent( "java.awt.event.MouseListener", "mousePressed", "buttonSimulateMousePressed", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "buttonReset"
+				"text": "重置"
+				addEvent( new FormEvent( "java.awt.event.MouseListener", "mousePressed", "buttonResetMousePressed", true ) )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 15, 20 )
+			"size": new java.awt.Dimension( 305, 200 )
+		} )
+	}
+}

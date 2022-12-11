@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mjl.water_electricity_manager.mapper.DormitoryBuildingMapper">
+  <resultMap id="BaseResultMap" type="com.mjl.water_electricity_manager.domain.DormitoryBuilding">
+    <!--@mbg.generated-->
+    <!--@Table dormitory_building-->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="school_id" jdbcType="INTEGER" property="schoolId" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="total_room_number" jdbcType="INTEGER" property="totalRoomNumber" />
+    <result column="occupied_room_number" jdbcType="INTEGER" property="occupiedRoomNumber" />
+    <result column="total_capacity" jdbcType="INTEGER" property="totalCapacity" />
+    <result column="occupied_capacity" jdbcType="INTEGER" property="occupiedCapacity" />
+    <result column="leader_name" jdbcType="VARCHAR" property="leaderName" />
+    <result column="leader_phone" jdbcType="VARCHAR" property="leaderPhone" />
+    <result column="leader_email" jdbcType="VARCHAR" property="leaderEmail" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    id, school_id, `name`, total_room_number, occupied_room_number, total_capacity, occupied_capacity, 
+    leader_name, leader_phone, leader_email
+  </sql>
+</mapper>

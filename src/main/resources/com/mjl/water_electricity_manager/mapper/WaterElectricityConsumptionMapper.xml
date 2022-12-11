@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mjl.water_electricity_manager.mapper.WaterElectricityConsumptionMapper">
+    <resultMap id="BaseResultMap" type="com.mjl.water_electricity_manager.domain.WaterElectricityConsumption">
+        <!--@mbg.generated-->
+        <!--@Table water_electricity_consumption-->
+        <id column="id" jdbcType="INTEGER" property="id"/>
+        <result column="school_id" jdbcType="INTEGER" property="schoolId"/>
+        <result column="dormitory_building_id" jdbcType="INTEGER" property="dormitoryBuildingId"/>
+        <result column="dormitory_id" jdbcType="INTEGER" property="dormitoryId"/>
+        <result column="water_consume" jdbcType="DECIMAL" property="waterConsume"/>
+        <result column="electricity_consume" jdbcType="DECIMAL" property="electricityConsume"/>
+        <result column="water_fee" jdbcType="DECIMAL" property="waterFee"/>
+        <result column="electricity_fee" jdbcType="DECIMAL" property="electricityFee"/>
+        <result column="total_fee" jdbcType="DECIMAL" property="totalFee"/>
+        <result column="date" jdbcType="DATE" property="date"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        <!--@mbg.generated-->
+        id,
+        school_id,
+        dormitory_building_id,
+        dormitory_id,
+        water_consume,
+        electricity_consume,
+        water_fee,
+        electricity_fee,
+        total_fee,
+        `date`
+    </sql>
+
+    <select id="searchByDormitoryId" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+        <!--@mbg.generated-->
+        select
+        <include refid="Base_Column_List"/>
+        from water_electricity_consumption
+        where dormitory_id = #{dormitoryId,jdbcType=INTEGER}
+    </select>
+
+    <select id="searchBy5Condition" resultMap="BaseResultMap">
+        <!--@mbg.generated-->
+        select
+        w.id,
+        school_id,
+        w.dormitory_building_id,
+        dormitory_id,
+        water_consume,
+        electricity_consume,
+        water_fee,
+        electricity_fee,
+        total_fee,
+        `date`
+        from water_electricity_consumption w,
+             billing_history b
+        <where>
+            w.dormitory_building_id = b.dormitory_building_id
+            <if test="param1 != null">
+                and w.dormitory_id = #{param1,jdbcType=INTEGER}
+            </if>
+            <if test="param2 != null">
+                and w.id = #{param2,jdbcType=INTEGER}
+            </if>
+            <if test="param3 != null">
+                and b.water_price = #{param3,jdbcType=DOUBLE}
+            </if>
+            <if test="param4 != null">
+                and b.electricity_price = #{param4,jdbcType=DOUBLE}
+            </if>
+            <if test="param5 != null">
+                and w.`date` = #{param5,jdbcType=DATE}
+            </if>
+        </where>
+    </select>
+</mapper>

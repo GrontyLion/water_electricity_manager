@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mjl.water_electricity_manager.mapper.BillingHistoryMapper">
+  <resultMap id="BaseResultMap" type="com.mjl.water_electricity_manager.domain.BillingHistory">
+    <!--@mbg.generated-->
+    <!--@Table billing_history-->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="dormitory_building_id" jdbcType="INTEGER" property="dormitoryBuildingId" />
+    <result column="water_price" jdbcType="DECIMAL" property="waterPrice" />
+    <result column="electricity_price" jdbcType="DECIMAL" property="electricityPrice" />
+    <result column="year" jdbcType="INTEGER" property="year" />
+    <result column="month" jdbcType="INTEGER" property="month" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    id, dormitory_building_id, water_price, electricity_price, `year`, `month`
+  </sql>
+</mapper>

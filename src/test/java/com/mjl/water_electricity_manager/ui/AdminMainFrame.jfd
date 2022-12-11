@@ -1,0 +1,543 @@
+JFDML JFormDesigner: "8.0.0.0.194" Java: "17.0.5" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq l {space :::p, comp tabbedPane1:::::x, space :::p}}"
+			"$verticalGroup": "par l {seq l {space :::p, comp tabbedPane1:::::x}}"
+		} ) {
+			name: "this"
+			"title": "管理员主界面"
+			add( new FormContainer( "javax.swing.JTabbedPane", new FormLayoutManager( class javax.swing.JTabbedPane ) ) {
+				name: "tabbedPane1"
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+					"$horizontalGroup": "par l {seq {space :::p, par l {comp panel3::::779:x, comp scrollPane1::::779:x}, space :::p}}"
+					"$verticalGroup": "par l {seq l {space :::p, comp panel3:::p::p, space :::p, comp scrollPane1::::377:x, space :::p}}"
+				} ) {
+					name: "panel1"
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+						"$horizontalGroup": "par l {seq {space :::p, par l:::p {seq {comp label1:::p::p, space :::p, comp textField0Id:::p::p, space s:::p, comp label2:::p::p, space :::p, comp textField0dName:::p:85:p, space s:::p, comp label3:::p::p, space :::p, comp textField0Name:::p::p, space s:::p, comp label4:::p::p, space :::p, comp textField0Phone:::p::p, space s:::p, comp label5:::p::p, space :::p, comp textField0Email:::p::p}, seq {comp label6:::p::p, space :::p, comp spinner0renL:::p::p, space :::p, comp label7:::p::p, space :::p, comp spinner0renR:::p:60:p, space :::p, comp label8:::p::p, space :::p, comp spinner0janL:::p::p, space :::p, comp label9:::p::p, space :::p, comp spinner0janR:::p::p, space :::x, comp button0Search:::p::p, space s:::p, comp button0Reset:::p::p, space s:::p, comp button0Other:::p::p}}, space :::x}}"
+						"$verticalGroup": "par l {seq l {space :::p, par b {comp label1::b:p::p, comp textField0Id::b:p::p, comp label2::b:p::p, comp textField0dName::b:p::p, comp label3::b:p::p, comp textField0Name::b:p::p, comp label4::b:p::p, comp textField0Phone::b:p::p, comp label5::b:p::p, comp textField0Email::b:p::p}, space s:::p, par l {par b:l {comp label6::b:p::p, comp label7::b:p::p, comp spinner0renR::b:p::p, comp spinner0renL::b:p::p}, par b {comp button0Search::b:p::p, comp button0Reset::b:p::p, comp button0Other::b:p::p, comp spinner0janR::b:p::p}, seq l {space :3:3:p, par l {comp label8:::p::p, comp label9:::p::p}}, comp spinner0janL::l:p::p}, space ::11:x}}"
+					} ) {
+						name: "panel3"
+						"border": new javax.swing.border.TitledBorder( "检索" )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label1"
+							"text": "编号："
+						} )
+						add( new FormComponent( "javax.swing.JTextField" ) {
+							name: "textField0Id"
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label2"
+							"text": "宿舍楼名："
+						} )
+						add( new FormComponent( "javax.swing.JTextField" ) {
+							name: "textField0dName"
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label3"
+							"text": "管理员姓名："
+						} )
+						add( new FormComponent( "javax.swing.JTextField" ) {
+							name: "textField0Name"
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label4"
+							"text": "管理员手机："
+						} )
+						add( new FormComponent( "javax.swing.JTextField" ) {
+							name: "textField0Phone"
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label5"
+							"text": "管理员邮箱："
+						} )
+						add( new FormComponent( "javax.swing.JTextField" ) {
+							name: "textField0Email"
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label6"
+							"text": "容量（人）区间："
+						} )
+						add( new FormComponent( "javax.swing.JSpinner" ) {
+							name: "spinner0renL"
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label7"
+							"text": "到"
+						} )
+						add( new FormComponent( "javax.swing.JSpinner" ) {
+							name: "spinner0renR"
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label8"
+							"text": "容量（间）区间："
+						} )
+						add( new FormComponent( "javax.swing.JSpinner" ) {
+							name: "spinner0janL"
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label9"
+							"text": "到"
+						} )
+						add( new FormComponent( "javax.swing.JSpinner" ) {
+							name: "spinner0janR"
+						} )
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "button0Search"
+							"text": "检索"
+							addEvent( new FormEvent( "java.awt.event.MouseListener", "mousePressed", "button0SearchMousePressed", true ) )
+						} )
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "button0Reset"
+							"text": "重置"
+							addEvent( new FormEvent( "java.awt.event.MouseListener", "mousePressed", "button0ResetMousePressed", true ) )
+						} )
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "button0Other"
+							"text": "其它"
+							addEvent( new FormEvent( "java.awt.event.MouseListener", "mousePressed", "button0OtherMousePressed", true ) )
+						} )
+					} )
+					add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+						name: "scrollPane1"
+						addEvent( new FormEvent( "java.awt.event.MouseListener", "mousePressed", "scrollPane1MousePressed", true ) )
+						add( new FormComponent( "javax.swing.JTable" ) {
+							name: "table0bottom"
+							"model": new com.jformdesigner.model.SwingTableModel( new java.util.Vector {
+								add( new java.util.Vector {
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+								} )
+								add( new java.util.Vector {
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+								} )
+							}, new java.util.Vector {
+								add( "编号" )
+								add( "宿舍楼名" )
+								add( "总容量（人）" )
+								add( "已住（人）" )
+								add( "总容量（间）" )
+								add( "已住（间）" )
+								add( "管理员姓名" )
+								add( "管理员手机" )
+								add( "管理员邮箱" )
+							}, new java.util.Vector {
+								add( class java.lang.Integer )
+								add( class java.lang.String )
+								add( class java.lang.Integer )
+								add( class java.lang.Integer )
+								add( class java.lang.Integer )
+								add( class java.lang.Integer )
+								add( class java.lang.String )
+								add( class java.lang.String )
+								add( class java.lang.String )
+							}, new java.util.Vector {
+								add( false )
+								add( false )
+								add( false )
+								add( false )
+								add( false )
+								add( false )
+								add( false )
+								add( false )
+								add( false )
+							}, new java.util.Vector {
+								add( null )
+								add( null )
+								add( null )
+								add( null )
+								add( null )
+								add( null )
+								add( null )
+								add( null )
+								add( null )
+							} )
+							addEvent( new FormEvent( "java.awt.event.MouseListener", "mousePressed", "table0bottomMousePressed", true ) )
+						} )
+					} )
+				}, new FormLayoutConstraints( null ) {
+					"title": "宿舍楼管理"
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+					"$horizontalGroup": "par l {seq {space :::p, par l {comp panel5:::::x, comp panel4:::::x}, space :::p}}"
+					"$verticalGroup": "par l {seq l {space :::p, comp panel5:::p:239:p, space :::p, comp panel4::::243:x, space :::p}}"
+				} ) {
+					name: "panel2"
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+						"$horizontalGroup": "par l {seq {space :::p, par l {comp scrollPane2::::757:x, seq l {comp label12:::p::p, space :6:6:p, comp textField1IdBottom:::p::p, space s:::p, comp label13:::p::p, space :::p, comp textField1NameBottom:::p::p, space s:::p, comp button1SearchBottom:::p::p, space s:::p, comp button1AddBottom:::p::p, space s:::p, comp button1EditBottom:::p::p, space s:::p, comp button1DeleteBottom:::p::p, space :0:167:x}}, space :::p}}"
+						"$verticalGroup": "par l {seq t {space :::x, par l {seq l {space :3:3:p, comp label12:::p::p}, par b {comp textField1IdBottom::b:p::p, comp label13::b:p::p, comp textField1NameBottom::b:p::p, comp button1SearchBottom::b:p::p, comp button1AddBottom::b:p::p, comp button1EditBottom::b:p::p, comp button1DeleteBottom::b:p::p}}, space u:::p, comp scrollPane2:::p:173:p, space :::p}}"
+					} ) {
+						name: "panel4"
+						"border": new javax.swing.border.TitledBorder( "宿舍人员信息（在上面选中宿舍后显示）" )
+						add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+							name: "scrollPane2"
+							add( new FormComponent( "javax.swing.JTable" ) {
+								name: "table1bottom"
+								"model": new com.jformdesigner.model.SwingTableModel( new java.util.Vector {
+									add( new java.util.Vector {
+										add( null )
+										add( null )
+										add( null )
+										add( null )
+										add( null )
+										add( null )
+										add( null )
+									} )
+									add( new java.util.Vector {
+										add( null )
+										add( null )
+										add( null )
+										add( null )
+										add( null )
+										add( null )
+										add( null )
+									} )
+								}, new java.util.Vector {
+									add( "编号" )
+									add( "姓名" )
+									add( "性别" )
+									add( "年龄" )
+									add( "邮箱" )
+									add( "手机号" )
+									add( "密码" )
+								}, new java.util.Vector {
+									add( class java.lang.Integer )
+									add( class java.lang.String )
+									add( class java.lang.String )
+									add( class java.lang.Integer )
+									add( class java.lang.String )
+									add( class java.lang.String )
+									add( class java.lang.String )
+								}, new java.util.Vector {
+									add( false )
+									add( false )
+									add( false )
+									add( false )
+									add( false )
+									add( false )
+									add( false )
+								}, new java.util.Vector {
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+								} )
+							} )
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label12"
+							"text": "编号："
+						} )
+						add( new FormComponent( "javax.swing.JTextField" ) {
+							name: "textField1IdBottom"
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label13"
+							"text": "姓名："
+						} )
+						add( new FormComponent( "javax.swing.JTextField" ) {
+							name: "textField1NameBottom"
+						} )
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "button1SearchBottom"
+							"text": "检索"
+							addEvent( new FormEvent( "java.awt.event.MouseListener", "mousePressed", "button1SearchBottomMousePressed", true ) )
+						} )
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "button1AddBottom"
+							"text": "新增"
+							addEvent( new FormEvent( "java.awt.event.MouseListener", "mousePressed", "button1AddBottomMousePressed", true ) )
+						} )
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "button1EditBottom"
+							"text": "修改"
+							addEvent( new FormEvent( "java.awt.event.MouseListener", "mousePressed", "button1EditBottomMousePressed", true ) )
+						} )
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "button1DeleteBottom"
+							"text": "删除"
+							addEvent( new FormEvent( "java.awt.event.MouseListener", "mousePressed", "button1DeleteBottomMousePressed", true ) )
+						} )
+					} )
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+						"$horizontalGroup": "par l {seq l {space :::p, par l {comp scrollPane3::::763:x, seq {comp label10:::p::p, space :::p, comp textField1IdTop:::p::p, space s:::p, comp label11:::p::p, space :::p, comp textField1NameTop:::p::p, space s:::p, comp button1SearchTop:::p::p, space s:::p, comp button1AddTop:::p::p, space s:::p, comp button1EditTop:::p::p, space s:::p, comp button1DeleteTop:::p::p, space :0:161:x}}}}"
+						"$verticalGroup": "par l {seq l {space :::x, par b {comp label10::b:p::p, comp textField1IdTop::b:p::p, comp label11::b:p::p, comp textField1NameTop::b:p::p, comp button1SearchTop::b:p::p, comp button1AddTop::b:p::p, comp button1EditTop::b:p::p, comp button1DeleteTop::b:p::p}, space u:::p, comp scrollPane3:::p:174:p, space :::p}}"
+					} ) {
+						name: "panel5"
+						"border": new javax.swing.border.TitledBorder( "宿舍信息" )
+						add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+							name: "scrollPane3"
+							addEvent( new FormEvent( "java.awt.event.MouseListener", "mousePressed", "scrollPane3MousePressed", true ) )
+							add( new FormComponent( "javax.swing.JTable" ) {
+								name: "table1top"
+								"model": new com.jformdesigner.model.SwingTableModel( new java.util.Vector {
+									add( new java.util.Vector {
+										add( null )
+										add( null )
+										add( null )
+										add( null )
+									} )
+									add( new java.util.Vector {
+										add( null )
+										add( null )
+										add( null )
+										add( null )
+									} )
+								}, new java.util.Vector {
+									add( "编号" )
+									add( "宿舍名" )
+									add( "容量（人）" )
+									add( "已住（人）" )
+								}, new java.util.Vector {
+									add( class java.lang.Integer )
+									add( class java.lang.String )
+									add( class java.lang.Integer )
+									add( class java.lang.Integer )
+								}, new java.util.Vector {
+									add( false )
+									add( false )
+									add( false )
+									add( false )
+								}, new java.util.Vector {
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+								} )
+								addEvent( new FormEvent( "java.awt.event.MouseListener", "mousePressed", "table1topMousePressed", true ) )
+							} )
+						} )
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "button1AddTop"
+							"text": "新增"
+							addEvent( new FormEvent( "java.awt.event.MouseListener", "mousePressed", "button1AddTopMousePressed", true ) )
+						} )
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "button1EditTop"
+							"text": "修改"
+							addEvent( new FormEvent( "java.awt.event.MouseListener", "mousePressed", "button1EditTopMousePressed", true ) )
+						} )
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "button1DeleteTop"
+							"text": "删除"
+							addEvent( new FormEvent( "java.awt.event.MouseListener", "mousePressed", "button1DeleteTopMousePressed", true ) )
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label10"
+							"text": "编号："
+						} )
+						add( new FormComponent( "javax.swing.JTextField" ) {
+							name: "textField1IdTop"
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label11"
+							"text": "宿舍名："
+						} )
+						add( new FormComponent( "javax.swing.JTextField" ) {
+							name: "textField1NameTop"
+						} )
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "button1SearchTop"
+							"text": "检索"
+							addEvent( new FormEvent( "java.awt.event.MouseListener", "mousePressed", "button1SearchTopMousePressed", true ) )
+						} )
+					} )
+				}, new FormLayoutConstraints( null ) {
+					"title": "宿舍管理"
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+					"$horizontalGroup": "par l {seq l {space :::p, comp panel7:::::x, space :::p}}"
+					"$verticalGroup": "par l {seq l {space :::p, comp panel7::::488:x, space :::p}}"
+				} ) {
+					name: "panel6"
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+						"$horizontalGroup": "par l {seq {space :::p, par l {comp scrollPane4::l::757:x, seq {par l {seq {comp label14:::p::p, space :::p, comp textField2Id:::p::p, space s:::p, comp label15:::p::p, space :::p, comp textField2Name:::p::p, space s:::p, comp label16:::p::p, space :::p, comp textField2Type:::p::p, space s:::p, comp label17:::p::p, space :::p, comp textField2Gender:::p::p, space s:::p, comp label18:::p::p, space :::p, comp spinner2ageL:::p:62:p}, seq l {comp label20:::p::p, space :::p, comp textField2Email:::p::p, space s:::p, comp label21:::p::p, space :::p, comp textField2Phone:::p::p, space s:::p, comp label22:::p::p, space s:::p, comp textField2Dormitory:::p::p, space s:::p, comp button2Search:::p::p, space s:::p, comp button2Add:::p::p, space s:::p, comp button2Edit:::p::p}}, space :::p, par l {seq l {comp label19:::p::p, space u:::p, comp spinner2ageR:::p::p}, comp button2Delete:::p::p}, space :0:0:x}}, space :::p}}"
+						"$verticalGroup": "par l {seq l {par l {seq l {space :p:9:p, par b {comp label19::b:p::p, comp spinner2ageL::b:p::p, comp spinner2ageR::b:p::p}}, seq t {space :::p, par b {comp label14::b:p::p, comp textField2Id::b:p::p, comp label15::b:p::p, comp textField2Name::b:p::p, comp label16::b:p::p, comp textField2Type::b:p::p, comp label17::b:p::p, comp textField2Gender::b:p::p, comp label18::b:p::p}}}, space u:::p, par b {comp label20::b:p::p, comp textField2Email::b:p::p, comp label21::b:p::p, comp textField2Phone::b:p::p, comp label22::b:p::p, comp textField2Dormitory::b:p::p, comp button2Search::b:p::p, comp button2Add::b:p::p, comp button2Edit::b:p::p, comp button2Delete::b:p::p}, space :p:17:p, comp scrollPane4:::p:387:p, space :::x}}"
+					} ) {
+						name: "panel7"
+						"border": new javax.swing.border.TitledBorder( "人员管理" )
+						add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+							name: "scrollPane4"
+							add( new FormComponent( "javax.swing.JTable" ) {
+								name: "table2Bottom"
+								"model": new com.jformdesigner.model.SwingTableModel( new java.util.Vector {
+									add( new java.util.Vector {
+										add( null )
+										add( null )
+										add( null )
+										add( null )
+										add( null )
+										add( null )
+										add( null )
+										add( null )
+										add( null )
+									} )
+									add( new java.util.Vector {
+										add( null )
+										add( null )
+										add( null )
+										add( null )
+										add( null )
+										add( null )
+										add( null )
+										add( null )
+										add( null )
+									} )
+								}, new java.util.Vector {
+									add( "编号" )
+									add( "姓名" )
+									add( "用户类型" )
+									add( "性别" )
+									add( "年龄" )
+									add( "邮箱" )
+									add( "手机号" )
+									add( "密码" )
+									add( "宿舍" )
+								}, new java.util.Vector {
+									add( class java.lang.Integer )
+									add( class java.lang.String )
+									add( class java.lang.String )
+									add( class java.lang.String )
+									add( class java.lang.Integer )
+									add( class java.lang.String )
+									add( class java.lang.String )
+									add( class java.lang.String )
+									add( class java.lang.String )
+								}, new java.util.Vector {
+									add( false )
+									add( false )
+									add( false )
+									add( false )
+									add( false )
+									add( false )
+									add( false )
+									add( false )
+									add( false )
+								}, new java.util.Vector {
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+									add( null )
+								} )
+							} )
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label14"
+							"text": "编号："
+						} )
+						add( new FormComponent( "javax.swing.JTextField" ) {
+							name: "textField2Id"
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label15"
+							"text": "姓名："
+						} )
+						add( new FormComponent( "javax.swing.JTextField" ) {
+							name: "textField2Name"
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label16"
+							"text": "用户类型："
+						} )
+						add( new FormComponent( "javax.swing.JTextField" ) {
+							name: "textField2Type"
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label17"
+							"text": "性别："
+						} )
+						add( new FormComponent( "javax.swing.JTextField" ) {
+							name: "textField2Gender"
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label18"
+							"text": "年龄区间："
+						} )
+						add( new FormComponent( "javax.swing.JSpinner" ) {
+							name: "spinner2ageL"
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label19"
+							"text": "到"
+						} )
+						add( new FormComponent( "javax.swing.JSpinner" ) {
+							name: "spinner2ageR"
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label20"
+							"text": "邮箱："
+						} )
+						add( new FormComponent( "javax.swing.JTextField" ) {
+							name: "textField2Email"
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label21"
+							"text": "手机号："
+						} )
+						add( new FormComponent( "javax.swing.JTextField" ) {
+							name: "textField2Phone"
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label22"
+							"text": "宿舍："
+						} )
+						add( new FormComponent( "javax.swing.JTextField" ) {
+							name: "textField2Dormitory"
+						} )
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "button2Search"
+							"text": "检索"
+							addEvent( new FormEvent( "java.awt.event.MouseListener", "mousePressed", "button2SearchMousePressed", true ) )
+						} )
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "button2Add"
+							"text": "新增"
+							addEvent( new FormEvent( "java.awt.event.MouseListener", "mousePressed", "button2AddMousePressed", true ) )
+						} )
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "button2Edit"
+							"text": "修改"
+							addEvent( new FormEvent( "java.awt.event.MouseListener", "mousePressed", "button2EditMousePressed", true ) )
+						} )
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "button2Delete"
+							"text": "删除（危险）"
+							addEvent( new FormEvent( "java.awt.event.MouseListener", "mousePressed", "button2DeleteMousePressed", true ) )
+						} )
+					} )
+				}, new FormLayoutConstraints( null ) {
+					"title": "人员管理"
+				} )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 805, 570 )
+		} )
+	}
+}

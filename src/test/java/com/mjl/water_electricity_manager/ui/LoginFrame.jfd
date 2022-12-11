@@ -1,0 +1,49 @@
+JFDML JFormDesigner: "8.0.0.0.194" Java: "17.0.5" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq {par l {seq {space :p:29:p, comp label1:::p::p}, seq l {space :p:90:p, par l:::p {seq {comp buttonLogin:::p::p, space :::x, comp buttonAbout:::p::p}, seq {par t {comp label3:::p::p, comp label2:::p::p}, space :::p, par l:::p {comp passwordFieldPwd:::::x, comp textFieldAccount:::p:153:p}}}}}, space ::30:x}}"
+			"$verticalGroup": "par l {seq l {space :p:14:p, comp label1:::p::p, space :p:41:p, par b {comp label2::b:p::p, comp textFieldAccount::b:p::p}, space s:::p, par b {comp label3::b:p::p, comp passwordFieldPwd::b:p::p}, space s:::p, par b {comp buttonAbout::b:p::p, comp buttonLogin::b:p::p}, space ::18:x}}"
+		} ) {
+			name: "this"
+			"title": "登录界面"
+			"resizable": false
+			"defaultCloseOperation": 3
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label1"
+				"text": "欢迎使用学校宿舍水电费管理系统"
+				"font": new java.awt.Font( "仿宋", 1, 20 )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label2"
+				"text": "账号："
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label3"
+				"text": "密码："
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "textFieldAccount"
+				"toolTipText": "手机号或邮箱"
+			} )
+			add( new FormComponent( "javax.swing.JPasswordField" ) {
+				name: "passwordFieldPwd"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "buttonLogin"
+				"text": "登录"
+				addEvent( new FormEvent( "java.awt.event.MouseListener", "mousePressed", "buttonLoginMousePressed", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "buttonAbout"
+				"text": "关于"
+				addEvent( new FormEvent( "java.awt.event.MouseListener", "mousePressed", "buttonAboutMousePressed", true ) )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 385, 230 )
+		} )
+	}
+}
