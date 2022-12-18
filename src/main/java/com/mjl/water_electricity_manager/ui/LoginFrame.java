@@ -50,10 +50,10 @@ public class LoginFrame extends JFrame {
         User user = userService.login(account, password);
         if (user != null) {
             UserService.loginUser = user;
-            if (user.getUserTypeId() == 1) {
+            if (user.getUserTypeId() == 2) {
                 studentMainFrame.setVisible(true);
                 simulateFrame.setVisible(true);
-            }else if (user.getUserTypeId() == 3) {
+            }else if (user.getUserTypeId() == 1) {
                 adminMainFrame.setVisible(true);
             }
             this.dispose();

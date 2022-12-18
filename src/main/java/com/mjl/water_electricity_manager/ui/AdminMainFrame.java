@@ -132,7 +132,6 @@ public class AdminMainFrame extends JFrame {
     private OtherDormitoryBuildingControlFrame otherDormitoryBuildingControlFrame;
 
 
-
     public AdminMainFrame() {
         initComponents();
     }
@@ -574,7 +573,7 @@ public class AdminMainFrame extends JFrame {
                     userType.getName(),
                     Objects.equals(user.getGender(), "M") ? "男" : "女", user.getAge(),
                     user.getEmail(), user.getPhone(), user.getPassword(),
-                    dormitory1.getName()}
+                    dormitory1 == null ? "" : dormitory1.getName()}
             );
         }
 
@@ -636,7 +635,7 @@ public class AdminMainFrame extends JFrame {
         }
 
         User user = User.builder().name(name)
-                .password(DigestUtil.md5Hex(password))
+                .password(password)
                 .age(Integer.parseInt(age))
                 .dormitoryId(dormitoryId == null ? null : Integer.parseInt(dormitoryId))
                 .phone(phone)

@@ -14,23 +14,21 @@ class WaterElectricityManagerApplicationTests {
 
     static {
         System.setProperty("java.awt.headless", "false");
-
     }
 
     @Test
-    void contextLoads() {
+    void testInserUser() {
         System.setProperty("java.awt.headless", "false");
 
-        User user = User.builder().name("ll")
-                .age(12)
-                .gender("M")
-                .phone("12345678901")
-                .email("53174219976@qq.com")
+        User user = User.builder().name("莫金兰")
+                .age(18)
+                .gender("F")
+                .phone("17677844600")
+                .email("1262973911@qq.com")
                 .userTypeId(1)
-                .dormitoryId(2)
+                .dormitoryId(null)
                 .password("e10adc3949ba59abbe56e057f20f883e")
                 .build();
         userMapper.insertUser(user);
     }
-
 }

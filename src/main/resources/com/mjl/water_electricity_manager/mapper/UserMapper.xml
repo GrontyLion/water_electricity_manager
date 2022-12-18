@@ -40,7 +40,7 @@
         from `user`
         where dormitory_id = #{dormitoryId,jdbcType=INTEGER}
     </select>
-
+<!--mybatis - plus -->
     <insert id="insertUser">
         <!--@mbg.generated-->
         <!--      调用存储过程inser_user-->
