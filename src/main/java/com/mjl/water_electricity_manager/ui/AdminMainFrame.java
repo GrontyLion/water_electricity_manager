@@ -1,5 +1,6 @@
 package com.mjl.water_electricity_manager.ui;
 
+import cn.hutool.core.util.ReUtil;
 import cn.hutool.crypto.digest.DigestUtil;
 import com.mjl.water_electricity_manager.domain.Dormitory;
 import com.mjl.water_electricity_manager.domain.DormitoryBuilding;
@@ -455,9 +456,17 @@ public class AdminMainFrame extends JFrame {
             JOptionPane.showMessageDialog(null, "学生邮箱不能为空");
             return;
         }
+        if (!ReUtil.isMatch("^[\\w-\\+]+(\\.[\\w]+)*@[\\w-]+(\\.[\\w]+)*(\\.[a-z]{2,})$", email)) {
+            JOptionPane.showMessageDialog(null, "学生邮箱格式不正确");
+            return;
+        }
         String phone = JOptionPane.showInputDialog("请输入学生电话", user.getPhone());
         if (phone == null) {
             JOptionPane.showMessageDialog(null, "学生电话不能为空");
+            return;
+        }
+        if (!ReUtil.isMatch("^((13[0-9])|(14[5|7])|(15([0-3]|[5-9]))|(17[013678])|(18[0,5-9]))\\d{8}$", phone)) {
+            JOptionPane.showMessageDialog(null, "学生电话格式不正确");
             return;
         }
         String password = JOptionPane.showInputDialog("请输入学生密码", "");
@@ -619,9 +628,17 @@ public class AdminMainFrame extends JFrame {
             JOptionPane.showMessageDialog(null, "学生邮箱不能为空");
             return;
         }
+        if (!ReUtil.isMatch("^[\\w-\\+]+(\\.[\\w]+)*@[\\w-]+(\\.[\\w]+)*(\\.[a-z]{2,})$", email)) {
+            JOptionPane.showMessageDialog(null, "学生邮箱格式不正确");
+            return;
+        }
         String phone = JOptionPane.showInputDialog("请输入学生电话", "");
         if (phone == null) {
             JOptionPane.showMessageDialog(null, "学生电话不能为空");
+            return;
+        }
+        if (!ReUtil.isMatch("^((13[0-9])|(14[5|7])|(15([0-3]|[5-9]))|(17[013678])|(18[0,5-9]))\\d{8}$", phone)) {
+            JOptionPane.showMessageDialog(null, "学生电话格式不正确");
             return;
         }
         String password = JOptionPane.showInputDialog("请输入学生密码", "");
@@ -705,9 +722,17 @@ public class AdminMainFrame extends JFrame {
             JOptionPane.showMessageDialog(null, "学生邮箱不能为空");
             return;
         }
+        if (!ReUtil.isMatch("^[\\w-\\+]+(\\.[\\w]+)*@[\\w-]+(\\.[\\w]+)*(\\.[a-z]{2,})$", email)) {
+            JOptionPane.showMessageDialog(null, "学生邮箱格式不正确");
+            return;
+        }
         String phone = JOptionPane.showInputDialog("请输入学生电话", user.getPhone());
         if (phone == null) {
             JOptionPane.showMessageDialog(null, "学生电话不能为空");
+            return;
+        }
+        if (!ReUtil.isMatch("^((13[0-9])|(14[5|7])|(15([0-3]|[5-9]))|(17[013678])|(18[0,5-9]))\\d{8}$", phone)) {
+            JOptionPane.showMessageDialog(null, "学生电话格式不正确");
             return;
         }
         String password = JOptionPane.showInputDialog("请输入学生密码", "");
@@ -873,7 +898,7 @@ public class AdminMainFrame extends JFrame {
                     userType.getName(),
                     Objects.equals(user.getGender(), "M") ? "男" : "女", user.getAge(),
                     user.getEmail(), user.getPhone(), user.getPassword(),
-                    dormitory.getName()}
+                    dormitory == null ? "" : dormitory.getName()}
             );
         }
     }

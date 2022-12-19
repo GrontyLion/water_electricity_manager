@@ -60,14 +60,12 @@ public class DormitoryBuildingService extends ServiceImpl<DormitoryBuildingMappe
 
     @Transactional
     public boolean insertDormitoryBuilding(String dName, String jan, String name, String phone, String email, String numbers, String start, String ePrice, String wPrice, String oneFloor) {
-        System.out.println("dName = " + dName);
         // numbers格式: 1,2,3,4,5,6，分别对应1人间，2人间，3人间，4人间，5人间，6人间的数量
         String[] split = numbers.split(",");
         int[] nums = new int[6];
         for (int i = 0; i < split.length; i++) {
             nums[i] = Integer.parseInt(split[i]);
         }
-        int totalCapacity = nums[0] + nums[1] * 2 + nums[2] * 3 + nums[3] * 4 + nums[4] * 5 + nums[5] * 6;
         int totalRoomNumber1 = nums[0] + nums[1] + nums[2] + nums[3] + nums[4] + nums[5];
 
         int totalRoomNumber2 = Integer.parseInt(jan);
@@ -92,20 +90,17 @@ public class DormitoryBuildingService extends ServiceImpl<DormitoryBuildingMappe
         // 从start号开始，依次插入jan个寝室
         int startNum = Integer.parseInt(start);
         int floor = Integer.parseInt(oneFloor);
-        int cf = 0;
-        int cr = 0;
-        int cur = 0;
+        int cf = 0; // 当前楼层
+        int cr = 0; // 当前楼层寝室数
+        int cur = 0; // 当前寝室类型
         for (int i = 0; i < Integer.parseInt(jan); i++) {
-            if (nums[cur] == 0) {
+            while (nums[cur] == 0) {
                 cur++;
             }
             if (cr == floor) {
                 cr = 0;
                 cf++;
             }
-
-            System.out.println("cf = " + cf + ", cr = " + cr + ", cur = " + cur + ", i = " + i);
-
             // 取startNum 的最高位，startNum的位数不确定
             int bits = (int) Math.pow(10, (startNum + "").length() - 1);
 
