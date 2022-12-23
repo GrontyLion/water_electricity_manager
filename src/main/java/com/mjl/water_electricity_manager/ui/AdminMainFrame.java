@@ -197,12 +197,13 @@ public class AdminMainFrame extends JFrame {
 
         // 查询
         List<Dormitory> dormitories = dormitoryService.selectDormitory(id, name);
+        List<Dormitory> collect = dormitories.stream().filter(dormitory -> dormitory.getDormitoryBuildingId().equals(currentDormitoryBuildingId)).toList();
 
         // 清空表格
         tableModel1Top.setRowCount(0);
 
         // 将查询结果显示到表格中
-        for (Dormitory dormitory : dormitories) {
+        for (Dormitory dormitory : collect) {
             tableModel1Top.addRow(new Object[]{
                     dormitory.getId(),
                     dormitory.getName(),
